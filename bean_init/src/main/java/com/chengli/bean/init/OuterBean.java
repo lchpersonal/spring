@@ -17,8 +17,8 @@ import org.springframework.stereotype.Service;
  * ⑥ 如果实现了BeanPostProcessor 则调用postProcessBeforeInitialization
  * ⑦ 如果实现了InitializingBean 则调用afterPropertiesSet，如果该方法用init-method实现了初始化方法，afterPropertiesSet也会被调用
  * ⑧ 如果实现了BeanPostProcessor 则调用postProcessAfterInitialization
- * ⑨ 如果实现了DisposableBean 则调用destroy
- *
+ * ⑨ 如果实现了DisposableBean 则调用destroy,如果Bean使用destory-method  声明了销毁方法，则destroy也会被调用
+ * <p>
  * Created by chengli on 2015/11/17.
  */
 @Service
